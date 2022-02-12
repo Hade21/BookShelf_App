@@ -25,7 +25,7 @@ body{
     background-color: #fce76c;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 120px 80%;
     position: relative;
 }
 header{
@@ -228,7 +228,8 @@ section{
 
 }
 
-.searchBox:hover > .searchInput {
+.searchBox:hover > .searchInput,
+.searchInput:focus {
     width: 60%;
     padding: 0 6px;
 }
