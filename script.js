@@ -10,6 +10,8 @@ const SAVED_LIST = "saved-list";
 const STORAGE_KEY = "list-buku";
 const blur = document.querySelector("header");
 const blur2 = document.querySelectorAll("section");
+const searchInput = document.querySelector(".searchInput");
+const searchButton = document.querySelector(".searchButton");
 
 finishedCheck.addEventListener("click", function() {
     if (finishedCheck.checked) {
@@ -227,4 +229,36 @@ function showSuccess(buku) {
         }
         hapusBuku(buku);
     }, 1000)
+}
+
+searchButton.addEventListener("click", function() {
+    searchBook(searchInput.value);
+})
+
+function searchBook(bookName) {
+    const daftar = localStorage.getItem(STORAGE_KEY);
+    const list = JSON.parse(daftar);
+    for (item of list) {
+        if (item.nama == bookName) {
+            const unfinished = document.querySelector(".unfinished");
+            unfinished.innerHTML = "";
+
+            const finished = document.querySelector(".finished");
+            finished.innerHTML = "";
+
+            const itemBuku = addBook(item);
+            if (item.sudahBaca == false) {
+                unfinished.append(itemBuku);
+            } else {
+                finished.append(itemBuku);
+            }
+            return;
+        } else {
+            const unfinished = document.querySelector(".unfinished");
+            unfinished.innerHTML = "";
+
+            const finished = document.querySelector(".finished");
+            finished.innerHTML = "";
+        }
+    }
 }
