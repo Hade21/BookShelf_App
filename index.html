@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Bookshelf Apps</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header-title">Bookshelf Apps</h1>
+    </header>
+    <section class="input-buku">
+        <h2 class="title">Masukkan buku Baru</h2>
+        <form action="#" id="form-input" class="form-input">
+            <div class="sect nameBook">
+                <label for="nama">Masukkan Judul Buku</label>
+                <input type="text" id="nama" name="nama" placeholder="Judul Buku" required>
+            </div>
+            <div class="sect pengarang">
+                <label for="pengarang">Masukkan Nama Pengarang</label>
+                <input type="text" id="pengarang" name="pengarang" placeholder="Nama Pengarang" required>
+            </div>
+            <div class="sect tahunBook">
+                <label for="tahun">Masukkan Tahun Terbit Buku</label>
+                <input type="text" id="tahun" name="tahun" placeholder="Tahun Buku" required>
+            </div>
+            <div class="sect button sudahBelum">
+                <label for="read" id="button-label">Sudah Selesai Baca?</label>
+                <input type="checkbox" id="read">
+            </div>
+            <button id="submit-button">MASUKKAN KE RAK BELUM SELESAI BACA</button>
+        </form>
+    </section>
+    <section class="content-wrapper">
+        <section class="belum-selesai-baca">
+            <h2 class="title">Belum Selesai Dibaca</h2>
+            <div class="list-item unfinished"></div>
+        </section>
+        <section class="sudah-selesai-baca">
+            <h2 class="title">Sudah Selesai Dibaca</h2>
+            <div class="list-item finished"></div>
+        </section>
+    </section>
+    <div class="dialog-box" hidden>
+        <p class="title">Anda yakin menghapus ini?</p>
+        <div class="tombol">
+            <button class="cancel">CANCEL</button>
+            <button class="yakin">YAKIN</button>
+        </div>
+    </div>
+    <div class="sukses-box" hidden>
+        <p class="title">BERHASIL MENGHAPUS</p>
+        <div class="icon">
+            <img src="./success-svgrepo-com.svg" alt="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
