@@ -15,9 +15,9 @@ const searchButton = document.querySelector(".searchButton");
 
 finishedCheck.addEventListener("click", function() {
     if (finishedCheck.checked) {
-        submitButton.innerText = "MASUKKAN BUKU KE RAK BELUM SELESAI BACA";
-    } else {
         submitButton.innerText = "MASUKKAN BUKU KE RAK SELESAI BACA";
+    } else {
+        submitButton.innerText = "MASUKKAN BUKU KE RAK BELUM SELESAI BACA";
     }
 });
 
